@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
- - docker build -t dmgman/node .
- - docker images dmgman/node
+ - docker build -t ltv88/node .
+ - docker images ltv88/node
 
 before_deploy:
   - docker login --username=ltv88 --password=ZXCo9708
 
 deploy:
   provider: script
-  script: docker push dmgman/node
+  script: docker push ltv88/node
   on:
     branch: master
