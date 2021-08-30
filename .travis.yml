@@ -10,7 +10,6 @@ before_deploy:
   - docker login --username=ltv88 --password=ZXCo9708
 
 deploy:
-  skip_cleanup: true
   provider: script
   script: docker push dmgman/node
   on:
