@@ -3,14 +3,15 @@ services:
   - docker
 
 script:
- - docker build -t mannydesigns/node .
- - docker images mannydesigns/node
+ - docker build -t dmgman/node .
+ - docker images dmgman/node
 
 before_deploy:
   - docker login --username=ltv88 --password=ZXCo9708
 
 deploy:
+  skip_cleanup: true
   provider: script
-  script: docker push mannydesigns/node
+  script: docker push dmgman/node
   on:
     branch: master
