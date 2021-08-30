@@ -7,7 +7,7 @@ script:
  - docker images mannydesigns/node
 
 before_deploy:
-  - docker login -username=ltv88 -password=ZXCo9708
+  - docker login --username=ltv88 --password=ZXCo9708
 
 deploy:
   provider: script
